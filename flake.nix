@@ -67,6 +67,9 @@
 
         devShells.default = craneLib.devShell {
           checks = self.checks.${system};
+          packages = [
+            pkgs.cargo-show-asm
+          ];
         };
       }
     );
