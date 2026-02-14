@@ -10,7 +10,7 @@ macro_rules! read_input {
             .join("input")
             .join(format!("{}.txt", env!("CARGO_CRATE_NAME")));
         let input = std::fs::read_to_string(input_path).unwrap();
-        let $input = input.trim();
+        let $input = input.trim_matches('\n');
     };
 }
 
