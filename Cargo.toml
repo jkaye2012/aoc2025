@@ -12,6 +12,8 @@ members = [
   "crates/d4",
   "crates/d5",
   "crates/d6",
+  "crates/d7",
+  "crates/d8",
 ]
 
 [workspace.package]

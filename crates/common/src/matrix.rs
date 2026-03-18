@@ -29,6 +29,10 @@ impl FlatMatrix {
         self.matrix.as_bytes()[idx] as char
     }
 
+    pub fn at_coord(&self, x: usize, y: usize) -> char {
+        self.at(y * self.width + x)
+    }
+
     pub fn update(&mut self, idx: usize, val: char) {
         unsafe {
             self.matrix.as_bytes_mut()[idx] = val as u8;
@@ -57,5 +61,13 @@ impl FlatMatrix {
                 Some(bytes[idx] as char)
             }
         })
+    }
+
+    pub fn width(&self) -> usize {
+        self.width
+    }
+
+    pub fn height(&self) -> usize {
+        self.height
     }
 }

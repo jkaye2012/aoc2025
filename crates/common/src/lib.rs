@@ -14,4 +14,5 @@ macro_rules! read_input {
     };
 }
 
+pub mod cartesian;
 pub mod matrix;
